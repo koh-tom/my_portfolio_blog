@@ -55,30 +55,30 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         </CardContent>
-                <CardFooter className="p-4 flex justify-end gap-4">
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="text-muted-foreground hover:text-foreground"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            window.open(project.github_link, "_blank", "noopener,noreferrer");
-                        }}
-                    >
-                        <Github size={20} />
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="text-muted-foreground hover:text-foreground"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            window.open(project.demo_link, "_blank", "noopener,noreferrer");
-                        }}
-                    >
-                        <ExternalLink size={20} />
-                    </Button>
-                </CardFooter>
+        <CardFooter className="p-4 flex justify-end gap-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-muted-foreground hover:text-foreground"
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(project.github_link, "_blank", "noopener,noreferrer");
+            }}
+          >
+            <Github size={20} />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-muted-foreground hover:text-foreground"
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(project.demo_link, "_blank", "noopener,noreferrer");
+            }}
+          >
+            <ExternalLink size={20} />
+          </Button>
+        </CardFooter>
       </Card>
     </Link>
   );

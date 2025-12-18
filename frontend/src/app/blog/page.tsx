@@ -1,4 +1,8 @@
-import { BlogPostCard, type Post, type Tag } from "@/components/blog/BlogPostCard";
+import {
+  BlogPostCard,
+  type Post,
+  type Tag,
+} from "@/components/blog/BlogPostCard";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
@@ -75,9 +79,9 @@ export default async function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <header className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Blog / ブログ</h1>
         <p className="text-lg text-muted-foreground mt-2">
-          Thoughts on technology, development, and life.
+          技術や開発、日常についての思考を綴っています。
         </p>
       </header>
 
@@ -86,11 +90,11 @@ export default async function BlogPage() {
         <div className="max-w-2xl mx-auto">
           <Input
             type="search"
-            placeholder="Search articles..."
+            placeholder="記事を検索..."
             className="w-full text-lg"
           />
           <div className="flex flex-wrap justify-center gap-2 mt-4">
-            <Badge variant="default">All</Badge>
+            <Badge variant="default">すべて</Badge>
             {tags.map((tag) => (
               <Badge key={tag.id} variant="outline" className="cursor-pointer">
                 {tag.name}

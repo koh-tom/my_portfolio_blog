@@ -3,7 +3,9 @@ import { ProjectCard, type Project } from "@/components/portfolio/ProjectCard";
 // サーバーサイドでプロジェクト一覧を取得
 async function getProjects(): Promise<Project[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`, { cache: 'no-store' });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`, {
+      cache: "no-store",
+    });
     if (!res.ok) {
       return [];
     }
@@ -27,7 +29,7 @@ const fallbackProjects: Project[] = [
     description:
       "A web application for managing tasks and collaborating with teams.",
     image_url: "/images/placeholder-project.png",
-    tech_stack: "Next.js,TypeScript,Tailwind CSS,Ruby on Rails",
+    tech_stack: "Built with Next.js, TypeScript, Ruby on Rails",
     github_link: "#",
     demo_link: "#",
   },
@@ -58,9 +60,9 @@ export default async function PortfolioPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <header className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight">My Works</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Portfolio / 制作実績</h1>
         <p className="text-lg text-muted-foreground mt-2">
-          A selection of projects I've built.
+          これまでに制作したプロジェクトを紹介します。
         </p>
       </header>
 

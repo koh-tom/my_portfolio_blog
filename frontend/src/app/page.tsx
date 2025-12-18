@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
+import { Timeline } from "@/components/home/Timeline";
 import { WorksPreview } from "@/components/home/WorksPreview";
 import { BlogPreview } from "@/components/home/BlogPreview";
 import { Skills } from "@/components/home/Skills";
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
+        <Timeline />
         <WorksPreview />
         <BlogPreview />
         <Skills />

@@ -6,7 +6,10 @@ import Link from "next/link";
 async function getLatestPosts(): Promise<Post[]> {
   try {
     // APIから最新3件を取得
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts?_sort=id&_order=desc&_limit=3`, { cache: 'no-store' });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/posts?_sort=id&_order=desc&_limit=3`,
+      { cache: "no-store" },
+    );
     if (!res.ok) return []; // エラー時は空配列
     const posts = await res.json();
     return posts.map((p: Post) => ({
