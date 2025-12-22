@@ -83,6 +83,7 @@ backend/config/master.key
 .env.*
 !.env.example
 !.env.ci
+.env.local
 
 # If you want to commit specific .env files, uncomment the following lines
 # and list the files you want to track.
